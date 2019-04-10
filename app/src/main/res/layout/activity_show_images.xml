@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ShowImagesActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <Button
+        android:id="@+id/takenewphoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/take_new_photo"
+        android:textStyle="bold"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/takenewphoto"
+        android:padding="10dp" />
+
+</RelativeLayout>

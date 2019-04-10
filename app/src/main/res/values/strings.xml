@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PhotoApp</string>
+    <string name="take_new_photo">Take New Photo</string>
+    <string name="upload_new_photo">Upload New Photo</string>
+    <string name="save_photo">Save</string>
+    <string name="try_again">Try Again</string>
+    <string name="reques_for_file_name">Please enter  the file name :</string>
+    <string name="file_name_text">File Name</string>
+    <string name="permission">Please provide permission to serve you better !</string>
+    <string name="sorry">Sorry !</string>
+</resources>
