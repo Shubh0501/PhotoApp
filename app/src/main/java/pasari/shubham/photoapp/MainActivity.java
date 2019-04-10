@@ -278,13 +278,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             SecretKey secretKey = (SecretKey) objectInputStream.readObject();
 
-            //Creating a buffer of length 16 and initializing fixed values
-            byte[] buffer = new byte[BUFFER_LENGTH];
+            //Creating a initialization_vector of length 16 and initializing fixed values
+            byte[] initialization_vector = new byte[BUFFER_LENGTH];
             for (int i = 0; i < BUFFER_LENGTH; i++) {
-                buffer[i] = (byte) ((i * 2) % 9);
+                initialization_vector[i] = (byte) ((i * 2) % 9);
             }
             //Interface to group all parameter
-            AlgorithmParameterSpec paramSpec = new IvParameterSpec(buffer);
+            AlgorithmParameterSpec paramSpec = new IvParameterSpec(initialization_vector);
 
             //Encrypting...
             Encrypter.encrypt(secretKey, paramSpec,

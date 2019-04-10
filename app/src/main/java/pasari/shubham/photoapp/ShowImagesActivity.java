@@ -134,11 +134,11 @@ public class ShowImagesActivity extends AppCompatActivity implements View.OnClic
             byte[] keyData = secretKey.getEncoded();
             SecretKey key2  = new SecretKeySpec(keyData, 0, keyData.length, ALGORITHM_SECRET_KEY_GENERATOR);
             //Interface to group all parameter
-            byte[] buffer1 = new byte[BUFFER_LENGTH];
+            byte[] initialization_vector = new byte[BUFFER_LENGTH];
             for (int i = 0; i< BUFFER_LENGTH; i++){
-                buffer1[i] = (byte) ((i*2) % 9);
+                initialization_vector[i] = (byte) ((i*2) % 9);
             }
-            AlgorithmParameterSpec paramSpec = new IvParameterSpec(buffer1);
+            AlgorithmParameterSpec paramSpec = new IvParameterSpec(initialization_vector);
 
             //Decrypting...
             Encrypter.decrypt(key2, paramSpec, new FileInputStream(file), new FileOutputStream(temp));
